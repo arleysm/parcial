@@ -1,0 +1,135 @@
+/* Estilo para el contenedor */
+.container {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    border-radius: 50px; /* Bordes más redondeados */
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #6200ff; /* Borde brillante */
+}
+
+/* Estilo para el título */
+.title {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #0d0e0d, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Degradado en el texto */
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+    border: 2px solid #00ffcc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+    animation: fadeIn 1s ease-out; /* Desvanecimiento al cargar */
+}
+
+.title:hover {
+    color: #ffcc00; /* Color al pasar el mouse */
+    text-decoration: underline; /* Subrayado */
+}
+
+/* Estilo para los contadores */
+.counter,
+.square {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #fff;
+    background: linear-gradient(45deg, #200079, #3b0edf); /* Gradiente de fondo */
+    padding: 30px; /* Tamaño del rectángulo */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(199, 192, 192, 0.4), 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombras múltiples */
+    border: 2px dashed #f17107; /* Borde intermitente */
+    width: 150px; /* Ancho del contenedor */
+    height: auto; /* Altura automática para el texto */
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    transition: transform 0.3s ease, background 0.5s ease; /* Transición suave */
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3); /* Sombra de texto */
+    animation: pulse 2s infinite, zoom 4s ease-in-out infinite; /* Animaciones de pulsación y zoom */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Efecto hover para contadores */
+.counter:hover,
+.square:hover {
+    transform: rotate(10deg) scale(1.5) translateY(-10px); /* Aumentar el scale para mayor efecto */
+    box-shadow: 0 0 30px 10px rgba(255, 102, 0, 0.7); /* Brillo anaranjado al hover */
+    background: linear-gradient(45deg, #aeda0f, #200079); /* Cambio de color de fondo en hover */
+}
+
+/* Grupo de botones */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones redondeados */
+.button {
+    padding: 15px;
+    width: 50px; /* Ajuste de tamaño para hacerlos circulares */
+    height: 50px; /* Altura igual al ancho */
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+    border-radius: 50%; /* Hacerlos circulares */
+    transition: transform 0.2s, background-color 0.3s ease;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(90deg, #00ffcc, #00ccff); /* Fondo degradado */
+}
+
+.increment {
+    background-color: transparent; /* Fondo transparente para el degradado */
+}
+
+.increment:hover {
+    background-color: #091412; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de agrandamiento más notable */
+}
+
+.decrement {
+    background-color: transparent; /* Fondo transparente para el degradado */
+}
+
+.decrement:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}

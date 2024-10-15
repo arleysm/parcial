@@ -1,0 +1,5 @@
+/* Clase para títulos en negro */
+.title-black {
+    color: black; /* Cambia el color a negro */
+    text-shadow: none; /* Elimina la sombra del texto, si aplica */
+}
